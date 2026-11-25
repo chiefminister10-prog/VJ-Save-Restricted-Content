@@ -14,12 +14,8 @@ api_hash = environ.get("HASH", "")
 api_id = int(environ.get("ID", ""))
 bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-ss = environ.get("STRING", "")
-if ss is not None:
-	acc = Client("myacc" ,api_id=api_id, api_hash=api_hash, session_string=ss)
-	acc.start()
-else: acc = None
-
+# User-account login disabled
+acc = None
 # download status
 def downstatus(statusfile,message):
 	while True:
